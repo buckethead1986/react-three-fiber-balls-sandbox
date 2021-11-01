@@ -14,31 +14,10 @@ import {
 } from "@react-three/drei";
 
 function Shape(props) {
-  // const [state, setState] = useState(props);
   const [mode, setMode] = useState("translate");
   const { shape, color, position } = props;
   // const orbit = useRef();
   const transform = useRef();
-
-  //--------neither needed
-  // useEffect(
-  //   () => {
-  //     setState({ ...state, active: props.active });
-  //   },
-  //   [props]
-  // );
-
-  // useEffect(() => {
-  //   if (transform.current) {
-  //     const controls = transform.current;
-  //     // setMode()
-  //     const callback = event => {console.log(orbit.current.enabled, event.value);
-  //       orbit.current.enabled = !event.value}
-  //     controls.addEventListener("dragging-changed", callback);
-  //     return () => controls.removeEventListener("dragging-changed", callback);
-  //   }
-  // });
-  //------------
 
   //cycle through 'translate', 'scale', and 'rotate'; transform modes.
   function changeMode() {
